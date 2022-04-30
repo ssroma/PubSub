@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pub Sub</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css"> -->
+  </head>
+  <body>
+    <div id="wrapper">
+      <header>
+        <nav>
+          <h1>Pub Sub</h1>
+        </nav>
+      </header>
+
+      <aside id="countModules"></aside>
+      
+      <main>
+        <div class="container">
+          <div class="col">
+            <h3 class="movieH3">Movies</h3>
+            <form>
+              <label for="moviesInput">Movie's title: </label>
+              <input type="text" name="moviesInput" id="moviesInput" required autocomplete="off" />
+              <button type="submit" class="btn btn-movie">Add Movie</button>
+            </form>
+          </div>
+          <div class="col">
+            <h3 class="actorH3">Actors</h3>
+            <form>
+              <label for="actorInput">Actor's Name: </label>
+              <input type="text" name="actorInput" id="actorInput" required autocomplete="off" />
+              <button type="submit" class="btn btn-actor">Add Actor</button>
+            </form>
+          </form>
+        </div>
+      </main>
+
+      <aside class="movie-actor-container">
+        <div class="movie">
+          <h3 class="movieH3">Movies List</h3>
+          <ul class="uls movieUls"></ul>
+        </div>
+        <div class="actor">
+          <h3 class="actorH3">Actors List</h3>
+          <ul class="uls actorUls"></ul>
+        </div>
+      </aside>
+
+      <footer>
+        <p>&copy;Roma</p>
+      </footer>
+    </div>
+    
+
+    <!-- template to be used in the Movies and Actors Module -->
+    <template id="moviesActorsLi">
+      <li><span class="deleteLi">X</span></li>
+    </template>
+  <!-- template to be used in the Movies and Actors Count Module -->
+    <template id="movies-actors-count-module">
+      <div class="count-container">
+        <h3 class="countTitle"></h3>
+        <h5>
+          The are <span>0</span> <span class="countsName"></span>(s) on the
+          list.
+        </h5>
+      </div>
+    </template>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
